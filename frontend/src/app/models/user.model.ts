@@ -12,4 +12,5 @@ export class User {
     address!: string;
     birthdate!: Date;
     profession!: string;
+    joinDate!: string;
 }

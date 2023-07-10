@@ -7,8 +7,8 @@
             <img src="../../../assets/profile.jpg" class="min-h-full" alt="John Doe">
         </div>
         <div class="flex flex-col">
-            <p class="text-5xl font-bold">John Doe</p>
-            <p class="text-xl">Frontend Developer</p>
+            <p class="text-5xl font-bold">{{ currentUser!.firstName }} {{ currentUser!.lastName }}</p>
+            <p class="text-xl">{{ currentUser!.profession }}</p>
             <p class="text-md px-1 bg-lime-500 w-fit text-white rounded-md">Admin</p>
         </div>
     </div>
@@ -16,23 +16,23 @@
     <div class="flex flex-col gap-2">
         <div class="flex gap-3">
             <p class="font-bold text-xl">Email:</p>
-            <p class="text-xl">john@gmail.com</p>
+            <p class="text-xl">{{ currentUser!.email }}</p>
         </div>
         <div class="flex gap-3">
             <p class="font-bold text-xl">Phone:</p>
-            <p class="text-xl">06 12 34 56 78</p>
+            <p class="text-xl">{{ currentUser!.phoneNumber }}</p>
         </div>
         <div class="flex gap-3">
             <p class="font-bold text-xl">Address:</p>
-            <p class="text-xl">Hay Ryad, Rabat - Morocco</p>
+            <p class="text-xl">{{ currentUser!.address }}</p>
         </div>
         <div class="flex gap-3">
             <p class="font-bold text-xl">Birthdate:</p>
-            <p class="text-xl">05/02/1999</p>
+            <p class="text-xl">{{ currentUser!.birthdate }}</p>
         </div>
         <div class="flex gap-3">
             <p class="font-bold text-xl">Joining Date:</p>
-            <p class="text-xl">05/02/2024</p>
+            <p class="text-xl">{{ currentUser!.joinDate }}</p>
         </div>
     </div>
 

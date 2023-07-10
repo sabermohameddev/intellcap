@@ -8,31 +8,31 @@
     <nav class="flex-grow">
         <ul class="flex flex-col space-y-4">
             <li>
-                <a routerLink="/home" class="px-4 py-2 flex items-center space-x-2 hover:bg-neutral-300" routerLinkActive="text-lime-500 font-bold">
+                <a routerLink="/admin/home" class="px-4 py-2 flex items-center space-x-2 hover:bg-neutral-300" routerLinkActive="text-lime-500 font-bold">
                     <i class="pi pi-home  text-lg"></i>
                     <span>Home</span>
                 </a>
             </li>
             <li>
-                <a routerLink="/users" class="px-4 py-2 flex items-center space-x-2 hover:bg-neutral-300 " routerLinkActive="text-lime-500 font-bold">
+                <a routerLink="/admin/users" class="px-4 py-2 flex items-center space-x-2 hover:bg-neutral-300 " routerLinkActive="text-lime-500 font-bold">
                     <i class="pi pi-users  text-lg"></i>
                     <span>Users</span>
                 </a>
             </li>
             <li>
-                <a routerLink="/materials" class="px-4 py-2 flex items-center space-x-2 hover:bg-neutral-300" routerLinkActive="text-lime-500 font-bold">
+                <a routerLink="/admin/materials" class="px-4 py-2 flex items-center space-x-2 hover:bg-neutral-300" routerLinkActive="text-lime-500 font-bold">
                     <i class="pi pi-server  text-lg"></i>
                     <span>Materials</span>
                 </a>
             </li>
             <li>
-            <a routerLink="/news" class="px-4 py-2 flex items-center space-x-2 hover:bg-neutral-300" routerLinkActive="text-lime-500 font-bold">
+            <a routerLink="/admin/news" class="px-4 py-2 flex items-center space-x-2 hover:bg-neutral-300" routerLinkActive="text-lime-500 font-bold">
                 <i class="pi pi-globe text-lg"></i>
                 <span>News</span>
             </a>
             </li>
             <li>
-            <a routerLink="/profile" class="px-4 py-2 flex items-center space-x-2 hover:bg-neutral-300" routerLinkActive="text-lime-500 font-bold">
+            <a routerLink="/admin/profile" class="px-4 py-2 flex items-center space-x-2 hover:bg-neutral-300" routerLinkActive="text-lime-500 font-bold">
                 <i class="pi pi-user text-lg"></i>
                 <span>Profile</span>
             </a>
@@ -42,11 +42,11 @@
 
     <!-- User info and logout -->
     <div class="p-4 flex items-center justify-between">
-        <button class="px-4 py-2  bg-lime-500 hover:bg-lime-600 rounded-l-full rounded-r-sm transition-all duration-300 rounded">
+        <button (click)="logout()" routerLink="/login" class="px-4 py-2  bg-lime-500 hover:bg-lime-600 rounded-l-full rounded-r-sm transition-all duration-300 rounded">
             <i class="pi pi-arrow-left text-white text-lg"></i>
         </button>
         <div class="flex flex-col items-center">
-            <p class=" mr-2">John Doe</p>
+            <p class=" mr-2">{{ currentUser!.firstName }} {{ currentUser!.lastName }}</p>
             <div class="flex gap-2 items-center justify-center">
                 <i class="pi pi-circle-fill text-[11px]  text-green-400"></i>
                 <p class="text-xs">Online</p>
