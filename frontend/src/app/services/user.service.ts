@@ -43,6 +43,17 @@ export class UserService {
       );
   }
 
+  updatePassword(userId: number, currentPassword: string, newPassword: string): Observable<User> {
+    const url = `${this.apiUrl}/${userId}/password`;
+    const data = { currentPassword, newPassword };
+    return this.http.put<User>(url, data).pipe(
+      catchError((error: any) => {
+        console.error('An error occurred:', error);
+        return throwError('Something went wrong. Please try again later.');
+      })
+    );
+  }
+
   toggleActivation(id: number): Observable<User> {
     const url = `${this.apiUrl}/${id}`;
     return this.http.get<User>(url)

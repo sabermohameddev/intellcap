@@ -1,6 +1,8 @@
 {
   "users": [
     {
+      "0": "123456",
+      "1": "123",
       "id": 1,
       "firstName": "Harry",
       "lastName": "Potter",
@@ -12,7 +14,7 @@
       "joinDate": "2020-05-01",
       "address": "Hay riad",
       "phoneNumber": "06 89 24 63 74",
-      "profession": "Fullstack Developer"
+      "profession": "Frontend Developer"
     },
     {
       "id": 2,
@@ -62,7 +64,7 @@
       "lastName": "Malfoy",
       "email": "draco@example.com",
       "password": "passworddef",
-      "isActive": true,
+      "isActive": false,
       "role": "User",
       "phoneNumber": "456789123",
       "address": "654 Boulevard, Town",
