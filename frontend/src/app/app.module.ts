@@ -21,6 +21,7 @@ import { RoleChangeModalComponent } from './admin/user-management/role-change-mo
 import { SidebarComponent } from './admin/sidebar/sidebar.component';
 import { ProfileComponent } from './shared/profile/profile.component';
 import { ProfileContentComponent } from './admin/profile-content/profile-content.component';
+import { ProfileUpdateComponent } from './shared/profile/profile-update/profile-update.component';
 
 
 
@@ -37,7 +38,8 @@ import { ProfileContentComponent } from './admin/profile-content/profile-content
     RoleChangeModalComponent,
     SidebarComponent,
     ProfileComponent,
-    ProfileContentComponent
+    ProfileContentComponent,
+    ProfileUpdateComponent
   ],
   imports: [
     BrowserModule,

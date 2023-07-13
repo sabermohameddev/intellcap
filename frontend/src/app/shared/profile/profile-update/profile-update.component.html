@@ -1,0 +1,15 @@
+<div  class="flex flex-col justify-between h-full w-full">
+    <div class="w-full py-2 ">
+        <p-dropdown [options]="config.data.professions"  [(ngModel)]="selectedRole"  styleClass="w-full"></p-dropdown>
+    </div>
+    <div class="mb-6">
+        <input type="text" pInputText placeholder="Address" [(ngModel)]="address" class="w-full"/>
+    </div>
+    <div class="mb-6">
+        <input type="text" pInputText placeholder="Phone" [(ngModel)]="phone" class="w-full"/>
+    </div>
+    <div class="flex justify-between gap-4 mt-">
+        <button class="bg-green-white border-lime-500 border-2 transition-all duration-300 text-lime-500 w-full py-2 hover:text-white hover:bg-lime-500 rounded-md" (click)="confirm()">Confirm</button>
+        <button class="bg-lime-500 w-full py-2 text-white hover:bg-lime-300 transition-all duration-300 rounded-md" (click)="cancel()">Cancel</button>
+    </div>
+</div>

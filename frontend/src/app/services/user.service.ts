@@ -28,6 +28,21 @@ export class UserService {
       );
   }
 
+  updateProfile(data: Partial<User>): Observable<User> {
+    const currentUser = JSON.parse(localStorage.getItem('currentUser')!);
+    const url = `${this.apiUrl}/${currentUser.id}`;
+    const user: User = {...currentUser, ...data};
+
+    localStorage.setItem('currentUser', JSON.stringify(user))
+    return this.http.put<User>(url, user)
+      .pipe(
+        catchError((error: any) => {
+          console.error('An error occurred:', error);
+          return throwError('Something went wrong. Please try again later.');
+        })
+      );
+  }
+
   toggleActivation(id: number): Observable<User> {
     const url = `${this.apiUrl}/${id}`;
     return this.http.get<User>(url)

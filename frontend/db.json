@@ -6,13 +6,13 @@
       "lastName": "Potter",
       "email": "harry@gmail.com",
       "password": "123456",
-      "isActive": false,
+      "isActive": true,
       "role": "Admin",
-      "phoneNumber": "06 78 98 69 84",
-      "address": "123 Street, City",
       "birthdate": "1990-01-01",
-      "profession": "Software Engineer",
-      "joinDate": "2020-05-01"
+      "joinDate": "2020-05-01",
+      "address": "Hay riad",
+      "phoneNumber": "06 89 24 63 74",
+      "profession": "Fullstack Developer"
     },
     {
       "id": 2,
