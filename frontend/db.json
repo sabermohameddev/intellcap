@@ -142,5 +142,35 @@
       "profession": "Accountant",
       "joinDate": "2022-03-15"
     }
+  ],
+  "news": [
+    {
+      "id": 1,
+      "title": "Exciting New Product Launch",
+      "content": "We are thrilled to announce the launch of our new product line. Check out our website for more details.",
+      "imgUrl": "https://example.com/news1.jpg",
+      "authorId": 1
+    },
+    {
+      "id": 2,
+      "title": "Upcoming Event: Tech Conference 2023",
+      "content": "Don't miss out on the biggest tech conference of the year! Join us for a day filled with insightful talks and networking opportunities.",
+      "imgUrl": "https://example.com/news2.jpg",
+      "authorId": 2
+    },
+    {
+      "id": 3,
+      "title": "Community Outreach Program",
+      "content": "We are proud to launch our new community outreach program, aimed at making a positive impact in the local community. Stay tuned for updates.",
+      "imgUrl": "https://example.com/news3.jpg",
+      "authorId": 3
+    },
+    {
+      "id": 5,
+      "title": "New Feature Update: Improved User Interface",
+      "content": "We have released a new update with an improved user interface for better usability. Log in to experience the enhanced features.",
+      "imgUrl": "https://example.com/news5.jpg",
+      "authorId": 2
+    }
   ]
 }

@@ -6,6 +6,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { InputMaskModule } from 'primeng/inputmask';
 import { DropdownModule } from 'primeng/dropdown';
 import { DialogModule } from 'primeng/dialog';
+import { CardModule } from 'primeng/card';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { DialogModule } from 'primeng/dialog';
         InputTextModule,
         InputMaskModule,
         DropdownModule,
-        DialogModule
+        DialogModule,
+        CardModule,
     ]
 })
 

@@ -4,6 +4,7 @@ import {AdminComponent} from "./admin.component";
 import { HomeComponent } from "./home/home.component";
 import { UserManagementComponent } from './user-management/user-management.component';
 import { ProfileContentComponent } from './profile-content/profile-content.component';
+import { NewsComponent } from './news/news.component';
 
 const routes: Routes = [
   {
@@ -12,7 +13,8 @@ const routes: Routes = [
     children: [
       { path: '', component: HomeComponent},
       { path: 'users', component: UserManagementComponent},
-      { path: 'profile', component: ProfileContentComponent}
+      { path: 'profile', component: ProfileContentComponent},
+      { path: 'news', component: NewsComponent},
     ]
   }
 ];
