@@ -25,6 +25,7 @@ import { ProfileUpdateComponent } from './shared/profile/profile-update/profile-
 import { PasswordUpdateComponent } from './shared/profile/password-update/password-update.component';
 import { NewsComponent } from './admin/news/news.component';
 import { DeleteConfirmationComponent } from './admin/news/delete-confirmation/delete-confirmation.component';
+import { AnnouncementComponent } from './admin/announcement/announcement.component';
 
 
 
@@ -45,7 +46,8 @@ import { DeleteConfirmationComponent } from './admin/news/delete-confirmation/de
     ProfileUpdateComponent,
     PasswordUpdateComponent,
     NewsComponent,
-    DeleteConfirmationComponent
+    DeleteConfirmationComponent,
+    AnnouncementComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,17 @@
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4 pt-8">
+    <div *ngFor="let announcement of announcements" class="bg-white rounded-lg shadow-md relative">
+        <div class="flex items-center p-4">
+            <img src="../../../assets/profile.jpg" alt="Author Picture" class="w-10 h-10 rounded-full mr-4">
+            <h3 class="text-lg font-semibold">{{ announcement.author.firstName }}</h3>
+        </div>
+        <div class="absolute top-4 right-2">
+            <i class="pi pi-ellipsis-v text-black text-lg"></i>
+        </div>
+        <div class="px-4 pb-4">
+            <p>{{ announcement.content }}</p>
+        </div>
+    </div>
+</div>
+<button (click)="addAnnouncement()" class="px-4 py-3 absolute bottom-8 shadow-md right-8 bg-lime-500 hover:bg-lime-600 rounded-full  transition-all duration-300">
+    <i class="pi pi-plus text-white text-lg"></i>
+</button>

@@ -172,5 +172,67 @@
       "imgUrl": "https://example.com/news5.jpg",
       "authorId": 2
     }
+  ],
+  "announcements": [
+    {
+      "id": 1,
+      "content": "Exciting news! We are launching a new product next week.",
+      "createdAt": "2023-07-01T09:00:00Z",
+      "author": {
+        "id": 1,
+        "firstName": "John Doe",
+        "picture": "https://example.com/john-doe.jpg"
+      }
+    },
+    {
+      "id": 2,
+      "content": "Join us for a special webinar on the latest industry trends.",
+      "createdAt": "2023-06-29T14:30:00Z",
+      "author": {
+        "id": 2,
+        "firstName": "Jane Smith",
+        "picture": "https://example.com/jane-smith.jpg"
+      }
+    },
+    {
+      "id": 3,
+      "content": "Reminder: Team meeting tomorrow at 10 AM. Don't be late!",
+      "createdAt": "2023-06-28T17:45:00Z",
+      "author": {
+        "id": 3,
+        "firstName": "Mike Johnson",
+        "picture": "https://example.com/mike-johnson.jpg"
+      }
+    },
+    {
+      "id": 4,
+      "content": "We are hiring! Check out our careers page for open positions.",
+      "createdAt": "2023-06-25T11:20:00Z",
+      "author": {
+        "id": 1,
+        "firstName": "John Doe",
+        "picture": "https://example.com/john-doe.jpg"
+      }
+    },
+    {
+      "id": 5,
+      "content": "Happy holidays! Our office will be closed from July 4th to July 8th.",
+      "createdAt": "2023-06-24T09:15:00Z",
+      "author": {
+        "id": 4,
+        "firstName": "Emily Brown",
+        "picture": "https://example.com/emily-brown.jpg"
+      }
+    },
+    {
+      "id": 6,
+      "content": "Congratulations to our team for achieving a new sales record!",
+      "createdAt": "2023-06-22T16:10:00Z",
+      "author": {
+        "id": 2,
+        "firstName": "Jane Smith",
+        "picture": "https://example.com/jane-smith.jpg"
+      }
+    }
   ]
 }

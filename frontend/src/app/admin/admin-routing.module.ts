@@ -5,6 +5,7 @@ import { HomeComponent } from "./home/home.component";
 import { UserManagementComponent } from './user-management/user-management.component';
 import { ProfileContentComponent } from './profile-content/profile-content.component';
 import { NewsComponent } from './news/news.component';
+import { AnnouncementComponent } from './announcement/announcement.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,7 @@ const routes: Routes = [
       { path: 'users', component: UserManagementComponent},
       { path: 'profile', component: ProfileContentComponent},
       { path: 'news', component: NewsComponent},
+      { path: 'announcements', component: AnnouncementComponent}
     ]
   }
 ];
