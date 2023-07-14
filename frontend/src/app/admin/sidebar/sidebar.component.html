@@ -21,7 +21,7 @@
             </li>
             <li>
                 <a routerLink="/admin/announcements" class="px-4 py-2 flex items-center space-x-2 hover:bg-neutral-300" routerLinkActive="text-lime-500 font-bold">
-                    <i class="pi pi-server  text-lg"></i>
+                    <i class="pi pi-bell text-lg"></i>
                     <span>Announcements</span>
                 </a>
             </li>
@@ -45,12 +45,18 @@
         <button (click)="logout()" routerLink="/login" class="px-4 py-2  bg-lime-500 hover:bg-lime-600 rounded-l-full rounded-r-sm transition-all duration-300 rounded">
             <i class="pi pi-arrow-left text-white text-lg"></i>
         </button>
-        <div class="flex flex-col items-center">
-            <p class=" mr-2">{{ currentUser!.firstName }} {{ currentUser!.lastName }}</p>
-            <div class="flex gap-2 items-center justify-center">
-                <i class="pi pi-circle-fill text-[11px]  text-green-400"></i>
-                <p class="text-xs">Online</p>
+        <div class="flex justify-between items-start">
+            <div class="flex flex-col items-start justify-start">
+                <p class=" mr-2 mt-0">{{ currentUser!.firstName }} {{ currentUser!.lastName }}</p>
+                <div class="flex gap-2 items-center justify-center">
+                    <i class="pi pi-circle-fill text-[11px]  text-green-400"></i>
+                    <p class="text-xs">Online</p>
+                </div>
+            </div>
+            <div class="rounded-full w-[45px] h-[45px] overflow-hidden">
+                <img src="../../../assets/profile.jpg" alt="Profile Picture" />
             </div>
         </div>
+        
     </div>
 </div>
