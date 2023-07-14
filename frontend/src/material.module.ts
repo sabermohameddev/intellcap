@@ -7,7 +7,7 @@ import { InputMaskModule } from 'primeng/inputmask';
 import { DropdownModule } from 'primeng/dropdown';
 import { DialogModule } from 'primeng/dialog';
 import { CardModule } from 'primeng/card';
-
+import { InputTextareaModule } from 'primeng/inputtextarea';
 
 @NgModule({
     exports: [
@@ -19,6 +19,7 @@ import { CardModule } from 'primeng/card';
         DropdownModule,
         DialogModule,
         CardModule,
+        InputTextareaModule
     ]
 })
 
