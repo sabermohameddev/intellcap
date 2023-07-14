@@ -145,13 +145,6 @@
   ],
   "news": [
     {
-      "id": 1,
-      "title": "Exciting New Product Launch",
-      "content": "We are thrilled to announce the launch of our new product line. Check out our website for more details.",
-      "imgUrl": "https://example.com/news1.jpg",
-      "authorId": 1
-    },
-    {
       "id": 2,
       "title": "Upcoming Event: Tech Conference 2023",
       "content": "Don't miss out on the biggest tech conference of the year! Join us for a day filled with insightful talks and networking opportunities.",
@@ -174,16 +167,6 @@
     }
   ],
   "announcements": [
-    {
-      "id": 1,
-      "content": "Exciting news! We are launching a new product next week.",
-      "createdAt": "2023-07-01T09:00:00Z",
-      "author": {
-        "id": 1,
-        "firstName": "John Doe",
-        "picture": "https://example.com/john-doe.jpg"
-      }
-    },
     {
       "id": 2,
       "content": "Join us for a special webinar on the latest industry trends.",
