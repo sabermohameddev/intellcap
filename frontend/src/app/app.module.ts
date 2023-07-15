@@ -28,6 +28,7 @@ import { DeleteConfirmationComponent } from './admin/news/delete-confirmation/de
 import { AnnouncementComponent } from './admin/announcement/announcement.component';
 import { DeleteAnnouncementComponent } from './admin/announcement/delete-announcement/delete-announcement.component';
 import { AddAnnouncementComponent } from './admin/announcement/add-announcement/add-announcement.component';
+import { UpdateAnnouncementComponent } from './admin/announcement/update-announcement/update-announcement.component';
 
 
 
@@ -51,7 +52,8 @@ import { AddAnnouncementComponent } from './admin/announcement/add-announcement/
     DeleteConfirmationComponent,
     AnnouncementComponent,
     DeleteAnnouncementComponent,
-    AddAnnouncementComponent
+    AddAnnouncementComponent,
+    UpdateAnnouncementComponent
   ],
   imports: [
     BrowserModule,

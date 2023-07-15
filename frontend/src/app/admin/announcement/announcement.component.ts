@@ -6,6 +6,7 @@ import { AuthService } from 'src/app/services/auth.service';
 import { DeleteAnnouncementComponent } from './delete-announcement/delete-announcement.component';
 import { AddAnnouncementComponent } from './add-announcement/add-announcement.component';
 import { User } from 'src/app/models/user.model';
+import { UpdateAnnouncementComponent } from './update-announcement/update-announcement.component';
 
 @Component({
   selector: 'app-announcement',
@@ -38,28 +39,6 @@ export class AnnouncementComponent implements OnInit {
     );
   }
 
-  // createAnnouncement(content: string): void {
-  //   const currentUser = this.authService.getCurrentUser();
-  //   if (!currentUser) {
-  //     // Handle the case when the current user is not available
-  //     return;
-  //   }
-  //   const newAnnouncement: Announcement = {
-      
-  //     content,
-  //     createdAt: new Date(),
-  //     author: currentUser
-  //   };
-
-  //   this.announcementService.createAnnouncement(newAnnouncement).subscribe(
-  //     (announcement: Announcement) => {
-  //       this.announcements.unshift(announcement); // Add the new announcement at the beginning of the array
-  //     },
-  //     (error: any) => {
-  //       console.error('An error occurred:', error);
-  //     }
-  //   );
-  // }
 
   confirmDelete(announcement: Announcement): void {
     const dialogRef = this.dialogService.open(DeleteAnnouncementComponent, {
@@ -119,6 +98,31 @@ export class AnnouncementComponent implements OnInit {
               console.error('An error occurred:', error);
             }
     )
+  }
+
+  updateModal(announcement: Announcement): void {
+    const dialogRef = this.dialogService.open(UpdateAnnouncementComponent, {
+      header: 'Edit Announcement',
+      width: '50%',
+      contentStyle: { 'min-height': '200px', overflow: 'auto' },
+      baseZIndex: 10000,
+      data: {
+        content: announcement.content
+      }
+    });
+
+    dialogRef.onClose.subscribe((data) => {
+      if (data) {
+        announcement.content = data
+        this.updateAnnouncement(announcement);
+      }
+    });
+  }
+
+  updateAnnouncement(announcement: Announcement) {
+    this.announcementService.updateAnnouncement(announcement).subscribe((res) => {
+      console.log("Announcement Updated");
+    })
   }
 
 }
