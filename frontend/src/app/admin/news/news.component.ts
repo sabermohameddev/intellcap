@@ -3,6 +3,8 @@ import { DialogService } from 'primeng/dynamicdialog';
 import { News } from 'src/app/models/news';
 import { NewsService } from 'src/app/services/news.service';
 import { DeleteConfirmationComponent } from './delete-confirmation/delete-confirmation.component';
+import { AuthService } from 'src/app/services/auth.service';
+import { AddArticleComponent } from './add-article/add-article.component';
 
 @Component({
   selector: 'app-news',
@@ -11,8 +13,9 @@ import { DeleteConfirmationComponent } from './delete-confirmation/delete-confir
 })
 export class NewsComponent implements OnInit {
   newsList: News[] = [];
+  currentUser = this.authService.getCurrentUser();
 
-  constructor(private newsService: NewsService, public dialogService: DialogService) { }
+  constructor(private newsService: NewsService, public dialogService: DialogService, private authService: AuthService) { }
 
   ngOnInit(): void {
     this.fetchNews();
@@ -34,8 +37,35 @@ export class NewsComponent implements OnInit {
 
   }
 
-  addNews() {
+  addModal(): void {
+    const dialogRef = this.dialogService.open(AddArticleComponent, {
+      header: 'New Article',
+      width: '70%',
+      contentStyle: { 'min-height': '200px', overflow: 'auto' },
+      baseZIndex: 10000,
+    });
 
+    dialogRef.onClose.subscribe((data) => {
+      if (data) {
+        this.addAnnouncement(data);
+      }
+    });
+  }
+
+  addAnnouncement(data: string) {
+    // const announcement = {
+    //   content: data,
+    //   createdAt: new Date(),
+    //   author: this.currentUser!
+    // }
+    // this.newsService.createAnnouncement(announcement).subscribe(
+    //   (announcement: Announcement) => {
+    //           this.announcements.unshift(announcement); // Add the new announcement at the beginning of the array
+    //         },
+    //         (error: any) => {
+    //           console.error('An error occurred:', error);
+    //         }
+    // )
   }
 
   confirmDeleteNews(news: News): void {

@@ -1,0 +1,20 @@
+<div class="mb-6 flex items-center gap-3">
+    <input type="text" pInputText placeholder="Title" [(ngModel)]="title" class="w-[70%]"/>
+    <label class="block">
+        <span class="sr-only">Choose Article Picture</span>
+        <input type="file" class="block w-full text-sm text-slate-500
+            file:mr-4 file:py-4 file:px-4
+            file:rounded-full file:border-0
+            file:text-sm file:font-semibold
+            file:bg-violet-50 file:text-violet-700
+            hover:file:bg-violet-100
+        "/>
+    </label>
+</div>
+<div class="mb-6 mx-auto">
+    <textarea rows="3" placeholder="Content..." cols="118" pInputTextarea [(ngModel)]="content" [autoResize]="true"></textarea>
+</div>
+<div class="flex justify-between gap-4 mt-">
+    <button class="bg-lime-500 w-full py-2 text-white font-bold hover:bg-lime-300 transition-all duration-300 rounded-md" (click)="confirm()">Post</button>
+    <button class=" w-full py-2 text-lime-500 font-bold   transition-all duration-300 rounded-md hover:bg-violet-100" (click)="cancel()">Cancel</button>
+</div>
