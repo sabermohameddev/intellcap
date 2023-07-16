@@ -3,7 +3,10 @@
         <div class="flex justify-between w-full items-center">
             <div class="flex items-center p-4">
                 <img src="../../../assets/profile.jpg" alt="Author Picture" class="w-10 h-10 rounded-full mr-4">
-                <h3 class="text-lg font-semibold">{{ announcement.author.firstName }}</h3>
+                <div class="flex flex-col justify-start items-start">
+                    <h3 class="text-lg m-0 font-semibold">{{ announcement.author.firstName }} {{ announcement.author.lastName }}</h3>
+                    <p class="text-xs">{{ announcement.createdAt | date }}</p>
+                </div>
             </div>
             <div (click)="triggerMenu(i)" class="w-[30px] h-[30px] flex cursor-pointer justify-center items-center hover:bg-neutral-300 rounded-full">
                 <i class="pi pi-ellipsis-v text-black text-lg"></i>

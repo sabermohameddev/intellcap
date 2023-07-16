@@ -14,7 +14,7 @@
       "joinDate": "2020-05-01",
       "address": "Hay riad",
       "phoneNumber": "06 89 24 63 74",
-      "profession": "Frontend Developer"
+      "profession": "UI/UX Designer"
     },
     {
       "id": 2,
@@ -216,69 +216,6 @@
         "firstName": "Jane Smith",
         "picture": "https://example.com/jane-smith.jpg"
       }
-    },
-    {
-      "content": "test 333",
-      "createdAt": "2023-07-15T10:16:36.882Z",
-      "author": {
-        "0": "123456",
-        "1": "123",
-        "id": 1,
-        "firstName": "Harry",
-        "lastName": "Potter",
-        "email": "harry@gmail.com",
-        "password": "123456",
-        "isActive": true,
-        "role": "Admin",
-        "birthdate": "1990-01-01",
-        "joinDate": "2020-05-01",
-        "address": "Hay riad",
-        "phoneNumber": "06 89 24 63 74",
-        "profession": "Frontend Developer"
-      },
-      "id": 7
-    },
-    {
-      "content": "test 2",
-      "createdAt": "2023-07-15T10:16:50.978Z",
-      "author": {
-        "0": "123456",
-        "1": "123",
-        "id": 1,
-        "firstName": "Harry",
-        "lastName": "Potter",
-        "email": "harry@gmail.com",
-        "password": "123456",
-        "isActive": true,
-        "role": "Admin",
-        "birthdate": "1990-01-01",
-        "joinDate": "2020-05-01",
-        "address": "Hay riad",
-        "phoneNumber": "06 89 24 63 74",
-        "profession": "Frontend Developer"
-      },
-      "id": 8
-    },
-    {
-      "content": "test 69",
-      "createdAt": "2023-07-15T10:26:10.883Z",
-      "author": {
-        "0": "123456",
-        "1": "123",
-        "id": 1,
-        "firstName": "Harry",
-        "lastName": "Potter",
-        "email": "harry@gmail.com",
-        "password": "123456",
-        "isActive": true,
-        "role": "Admin",
-        "birthdate": "1990-01-01",
-        "joinDate": "2020-05-01",
-        "address": "Hay riad",
-        "phoneNumber": "06 89 24 63 74",
-        "profession": "Frontend Developer"
-      },
-      "id": 9
     }
   ]
 }

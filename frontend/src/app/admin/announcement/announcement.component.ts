@@ -31,7 +31,9 @@ export class AnnouncementComponent implements OnInit {
   loadAnnouncements(): void {
     this.announcementService.getAnnouncements().subscribe(
       (announcements: Announcement[]) => {
-        this.announcements = announcements;
+        this.announcements = announcements.sort((a, b) => {
+          return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+        });
       },
       (error: any) => {
         console.error('An error occurred:', error);

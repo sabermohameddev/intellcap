@@ -29,6 +29,7 @@ import { AnnouncementComponent } from './admin/announcement/announcement.compone
 import { DeleteAnnouncementComponent } from './admin/announcement/delete-announcement/delete-announcement.component';
 import { AddAnnouncementComponent } from './admin/announcement/add-announcement/add-announcement.component';
 import { UpdateAnnouncementComponent } from './admin/announcement/update-announcement/update-announcement.component';
+import { HomeComponent } from './admin/home/home.component';
 
 
 
@@ -53,7 +54,8 @@ import { UpdateAnnouncementComponent } from './admin/announcement/update-announc
     AnnouncementComponent,
     DeleteAnnouncementComponent,
     AddAnnouncementComponent,
-    UpdateAnnouncementComponent
+    UpdateAnnouncementComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
