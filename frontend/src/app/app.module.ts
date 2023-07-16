@@ -31,6 +31,7 @@ import { AddAnnouncementComponent } from './admin/announcement/add-announcement/
 import { UpdateAnnouncementComponent } from './admin/announcement/update-announcement/update-announcement.component';
 import { HomeComponent } from './admin/home/home.component';
 import { AddArticleComponent } from './admin/news/add-article/add-article.component';
+import { PosterComponent } from './admin/poster/poster.component';
 
 
 
@@ -57,7 +58,8 @@ import { AddArticleComponent } from './admin/news/add-article/add-article.compon
     AddAnnouncementComponent,
     UpdateAnnouncementComponent,
     HomeComponent,
-    AddArticleComponent
+    AddArticleComponent,
+    PosterComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,19 @@
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 px-4 pt-8">
+    <!-- Placeholder for adding new poster -->
+        <div (click)="addNewPoster()" class="group flex items-center transition-all min-w-[16rem] duration-300 justify-center cursor-pointer  h-80 border-4 border-dashed border-gray-400 hover:border-black  rounded-lg shadow-md">
+            <div class="flex flex-col items-center gap-3">
+                <i class="pi pi-plus  transform transition-all duration-300 text-4xl group-hover:text-black text-gray-400"></i>
+                <p class="text-2xl font-bold w-full transition-all duration-300 group-hover:text-black text-gray-400">New Post</p>
+            </div>
+        </div>
+        <div class="h-80 overflow-hidden hover:scale-105 transition-all duration-300 rounded-lg ">
+            <img src="assets/poster.png" class="object-cover" alt="">
+        </div>
+        <!-- Display existing posters -->
+        <!-- <div *ngFor="let poster of posters" class="relative bg-white rounded-lg shadow-md">
+            <img [src]="poster.imgUrl" alt="Poster Image" class="object-cover w-full h-48 rounded-t-lg">
+            <div class="p-4">
+                <h2 class="text-xl font-semibold">{{ poster.creator.firstName }}</h2>
+            </div>
+        </div> -->
+</div>

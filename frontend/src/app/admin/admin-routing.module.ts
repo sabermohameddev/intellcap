@@ -6,6 +6,7 @@ import { UserManagementComponent } from './user-management/user-management.compo
 import { ProfileContentComponent } from './profile-content/profile-content.component';
 import { NewsComponent } from './news/news.component';
 import { AnnouncementComponent } from './announcement/announcement.component';
+import { PosterComponent } from './poster/poster.component';
 
 const routes: Routes = [
   {
@@ -16,7 +17,8 @@ const routes: Routes = [
       { path: 'users', component: UserManagementComponent},
       { path: 'profile', component: ProfileContentComponent},
       { path: 'news', component: NewsComponent},
-      { path: 'announcements', component: AnnouncementComponent}
+      { path: 'announcements', component: AnnouncementComponent},
+      { path: 'posters', component: PosterComponent},
     ]
   }
 ];
