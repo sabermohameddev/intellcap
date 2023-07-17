@@ -1,1 +1,8 @@
-<p>articles works!</p>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4 pt-8">
+    <div *ngFor="let news of newsList" (click)="newsDetails(news)" class=" group cursor-pointer relative bg-white rounded-lg shadow-md hover:scale-105 transition-all duration-300">
+        <img [src]="news.imgUrl" alt="News Image" class="object-cover w-full h-48 rounded-t-lg">
+        <div class="p-4">
+            <h2 class="text-xl font-semibold">{{ news.title }}</h2>
+        </div>
+    </div>
+</div>
