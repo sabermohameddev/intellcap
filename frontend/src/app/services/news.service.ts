@@ -42,4 +42,8 @@ export class NewsService {
       })
     );
   }
+
+  saveNews(news: News): Observable<News> {
+    return this.http.post<News>(this.apiUrl, news);
+  }
 }

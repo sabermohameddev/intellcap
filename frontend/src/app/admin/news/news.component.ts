@@ -45,27 +45,25 @@ export class NewsComponent implements OnInit {
       baseZIndex: 10000,
     });
 
-    dialogRef.onClose.subscribe((data) => {
+    dialogRef.onClose.subscribe((data: News) => {
       if (data) {
+        data.author = this.currentUser!;
+        data.createdAt = new Date(); 
+        // console.log(data);
         this.addAnnouncement(data);
       }
     });
   }
 
-  addAnnouncement(data: string) {
-    // const announcement = {
-    //   content: data,
-    //   createdAt: new Date(),
-    //   author: this.currentUser!
-    // }
-    // this.newsService.createAnnouncement(announcement).subscribe(
-    //   (announcement: Announcement) => {
-    //           this.announcements.unshift(announcement); // Add the new announcement at the beginning of the array
-    //         },
-    //         (error: any) => {
-    //           console.error('An error occurred:', error);
-    //         }
-    // )
+  addAnnouncement(data: News) {
+    this.newsService.saveNews(data).subscribe(
+      (news: News) => {
+              this.newsList.unshift(news); // Add the new announcement at the beginning of the array
+            },
+            (error: any) => {
+              console.error('An error occurred:', error);
+            }
+    )
   }
 
   confirmDeleteNews(news: News): void {
@@ -87,7 +85,7 @@ export class NewsComponent implements OnInit {
   }
 
   deleteNews(news: News): void {
-    this.newsService.deleteNews(news.id).subscribe(() => {
+    this.newsService.deleteNews(news.id!).subscribe(() => {
       // Remove the deleted news from the list
       this.newsList = this.newsList.filter(item => item.id !== news.id);
     });

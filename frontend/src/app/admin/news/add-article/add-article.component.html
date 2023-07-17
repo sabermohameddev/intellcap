@@ -2,7 +2,7 @@
     <input type="text" pInputText placeholder="Title" [(ngModel)]="title" class="w-[70%]"/>
     <label class="block">
         <span class="sr-only">Choose Article Picture</span>
-        <input type="file" class="block w-full text-sm text-slate-500
+        <input type="file" (change)="onImageSelected($event)" class="block w-full text-sm text-slate-500
             file:mr-4 file:py-4 file:px-4
             file:rounded-full file:border-0
             file:text-sm file:font-semibold
