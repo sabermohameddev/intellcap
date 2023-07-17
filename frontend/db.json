@@ -14,7 +14,7 @@
       "joinDate": "2020-05-01",
       "address": "Hay riad",
       "phoneNumber": "06 89 24 63 74",
-      "profession": "UI/UX Designer"
+      "profession": "Fullstack Developer"
     },
     {
       "id": 2,
@@ -132,14 +132,14 @@
       "id": 10,
       "firstName": "Lavender",
       "lastName": "Brown",
-      "email": "lavender@example.com",
-      "password": "passwordabc",
+      "email": "lavender@gmail.com",
+      "password": "123456",
       "isActive": true,
       "role": "User",
       "phoneNumber": "789654123",
       "address": "321 Lane, City",
       "birthdate": "1994-08-22",
-      "profession": "Accountant",
+      "profession": "Frontend Developer",
       "joinDate": "2022-03-15"
     }
   ],

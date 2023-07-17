@@ -1,0 +1,83 @@
+<div class="flex flex-col h-screen w-[18vw] bg-neutral-100">
+    <!-- Logo -->
+    <div class="p-4">
+        <img src="assets/intellcap_logo.png" alt="Logo" class="w-full h-auto">
+    </div>
+
+    <!-- Links -->
+    <nav class="flex-grow">
+        <ul class="flex flex-col space-y-2">
+            <li>
+                <a routerLink="/user/dashboard" class="px-4 py-2 flex items-center space-x-2 hover:bg-neutral-300" routerLinkActive="text-lime-500 font-bold">
+                    <i class="pi pi-th-large  text-lg"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a routerLink="/user/calendar" class="px-4 py-2 flex items-center space-x-2 hover:bg-neutral-300" routerLinkActive="text-lime-500 font-bold">
+                    <i class="pi pi-calendar  text-lg"></i>
+                    <span>Calendar</span>
+                </a>                
+            </li>
+            <li>
+                <a routerLink="/user/news" class="px-4 py-2 flex items-center space-x-2 hover:bg-neutral-300" routerLinkActive="text-lime-500 font-bold">
+                    <i class="pi pi-megaphone  text-lg"></i>
+                    <span>News</span>
+                </a>
+            </li>
+            <li>
+                <a routerLink="/user/global" class="px-4 py-2 flex items-center space-x-2 hover:bg-neutral-300" routerLinkActive="text-lime-500 font-bold">
+                    <i class="pi pi-hashtag text-lg"></i>
+                    <span>Global chat</span>
+                </a>
+            </li>
+            <li>
+                <a routerLink="/user/profile" class="px-4 py-2 flex items-center space-x-2 hover:bg-neutral-300" routerLinkActive="text-lime-500 font-bold">
+                    <i class="pi pi-user text-lg"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+
+            <div class="flex justify-center ">
+                <div class="w-[80%] h-[2px] bg-neutral-300"></div>
+            </div>
+
+            <li>
+                <a routerLink="/project" class="px-7 py-2 flex justify-between items-center space-x-2 hover:bg-neutral-300" (click)="toggleSubMenu()">
+                    <span>Projects</span>
+                    <i class="pi pi-chevron-down ml-auto" [class.pi-chevron-up]="isSubMenuOpen"></i>
+                </a>
+                <ul *ngIf="isSubMenuOpen" class="submenu">
+                    <li>
+                        <a (click)="openNewProjectDialog()" class="px-4 py-2 flex items-center space-x-2 cursor-pointer hover:bg-neutral-300">
+                            <i class="pi pi-plus text-lg"></i>
+                            <span>New Project</span>
+                        </a>
+                    </li>
+                    
+                    <!-- Add more submenu items if needed -->
+                </ul>
+            </li>   
+        </ul>
+    </nav>
+
+    <!-- User info and logout -->
+    <div class="p-4 flex items-center justify-between">
+        <button (click)="logout()" routerLink="/login" class="px-4 py-2  bg-lime-500 hover:bg-lime-600 rounded-l-full rounded-r-sm transition-all duration-300 rounded">
+            <i class="pi pi-arrow-left text-white text-lg"></i>
+        </button>
+        <div class="flex justify-between items-start">
+            <div class="flex flex-col items-start justify-start">
+                <p class=" mr-2 mt-0">{{ currentUser!.firstName }}</p>
+                <div class="flex gap-2 items-center justify-center">
+                    <i class="pi pi-circle-fill text-[11px]  text-green-400"></i>
+                    <p class="text-xs">Online</p>
+                </div>
+            </div>
+            <div class="rounded-full w-[45px] h-[45px] overflow-hidden">
+                <img src="../../../assets/profile.jpg" alt="Profile Picture" />
+            </div>
+        </div>
+        
+    </div>
+</div>

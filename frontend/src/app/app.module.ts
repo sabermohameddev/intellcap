@@ -32,6 +32,13 @@ import { UpdateAnnouncementComponent } from './admin/announcement/update-announc
 import { HomeComponent } from './admin/home/home.component';
 import { AddArticleComponent } from './admin/news/add-article/add-article.component';
 import { PosterComponent } from './admin/poster/poster.component';
+import { UserSidebarComponent } from './user/user-sidebar/user-sidebar.component';
+import { ProjectsComponent } from './user/projects/projects.component';
+import { NewProjectComponent } from './user/projects/new-project/new-project.component';
+import { CalendarComponent } from './user/calendar/calendar.component';
+import { ArticlesComponent } from './user/articles/articles.component';
+import { GlobalChatComponent } from './user/global-chat/global-chat.component';
+import { UserProfileComponent } from './user/user-profile/user-profile.component';
 
 
 
@@ -59,7 +66,14 @@ import { PosterComponent } from './admin/poster/poster.component';
     UpdateAnnouncementComponent,
     HomeComponent,
     AddArticleComponent,
-    PosterComponent
+    PosterComponent,
+    UserSidebarComponent,
+    ProjectsComponent,
+    NewProjectComponent,
+    CalendarComponent,
+    ArticlesComponent,
+    GlobalChatComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
