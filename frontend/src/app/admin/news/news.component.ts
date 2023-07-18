@@ -5,6 +5,7 @@ import { NewsService } from 'src/app/services/news.service';
 import { DeleteConfirmationComponent } from './delete-confirmation/delete-confirmation.component';
 import { AuthService } from 'src/app/services/auth.service';
 import { AddArticleComponent } from './add-article/add-article.component';
+import { EditArticleComponent } from './edit-article/edit-article.component';
 
 @Component({
   selector: 'app-news',
@@ -33,8 +34,25 @@ export class NewsComponent implements OnInit {
       );
   }
 
-  openNewsUpdate(news: News) {
+  editModal(news: News) {
+    const dialogRef = this.dialogService.open(EditArticleComponent, {
+      header: 'Edit Article',
+      width: '70%',
+      contentStyle: { 'min-height': '200px', overflow: 'auto' },
+      baseZIndex: 10000,
+      data: {
+        news: news
+      }
+    });
 
+    dialogRef.onClose.subscribe((data: News) => {
+      if (data) {
+        data.author = this.currentUser!;
+        data.createdAt = new Date(); 
+        console.log(data);
+        // this.addAnnouncement(data);
+      }
+    });
   }
 
   addModal(): void {

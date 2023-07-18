@@ -40,6 +40,7 @@ import { ArticlesComponent } from './user/articles/articles.component';
 import { GlobalChatComponent } from './user/global-chat/global-chat.component';
 import { UserProfileComponent } from './user/user-profile/user-profile.component';
 import { ArticleDetailsComponent } from './user/articles/article-details/article-details.component';
+import { EditArticleComponent } from './admin/news/edit-article/edit-article.component';
 
 
 
@@ -75,7 +76,8 @@ import { ArticleDetailsComponent } from './user/articles/article-details/article
     ArticlesComponent,
     GlobalChatComponent,
     UserProfileComponent,
-    ArticleDetailsComponent
+    ArticleDetailsComponent,
+    EditArticleComponent
   ],
   imports: [
     BrowserModule,
