@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { News } from 'src/app/models/news';
 import { NewsService } from 'src/app/services/news.service';
 
@@ -10,7 +11,7 @@ import { NewsService } from 'src/app/services/news.service';
 export class ArticlesComponent implements OnInit {
   newsList: News[] = [];
 
-  constructor(private newsService: NewsService) { }
+  constructor(private newsService: NewsService, private router: Router) { }
 
   ngOnInit(): void {
     this.fetchNews();
@@ -28,7 +29,7 @@ export class ArticlesComponent implements OnInit {
       );
   }
 
-  newsDetails(news: News) {
-
+  articleDetails(news: News) {
+    this.router.navigate(['/user/news', news.id]);
   }
 }

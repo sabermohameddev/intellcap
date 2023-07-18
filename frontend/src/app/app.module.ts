@@ -39,6 +39,7 @@ import { CalendarComponent } from './user/calendar/calendar.component';
 import { ArticlesComponent } from './user/articles/articles.component';
 import { GlobalChatComponent } from './user/global-chat/global-chat.component';
 import { UserProfileComponent } from './user/user-profile/user-profile.component';
+import { ArticleDetailsComponent } from './user/articles/article-details/article-details.component';
 
 
 
@@ -73,7 +74,8 @@ import { UserProfileComponent } from './user/user-profile/user-profile.component
     CalendarComponent,
     ArticlesComponent,
     GlobalChatComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    ArticleDetailsComponent
   ],
   imports: [
     BrowserModule,

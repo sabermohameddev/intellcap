@@ -7,6 +7,7 @@ import { CalendarComponent } from './calendar/calendar.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { GlobalChatComponent } from './global-chat/global-chat.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { ArticleDetailsComponent } from './articles/article-details/article-details.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,7 @@ const routes: Routes = [
       { path: 'dashboard', component: DashboardComponent},
       { path: 'calendar', component: CalendarComponent},
       { path: 'news', component: ArticlesComponent},
+      { path: 'news/:id', component: ArticleDetailsComponent },
       { path: 'global', component: GlobalChatComponent},
       { path: 'profile', component: UserProfileComponent},
     ]
