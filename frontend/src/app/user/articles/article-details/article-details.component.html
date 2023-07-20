@@ -1,14 +1,13 @@
 <div class="w-[82vw] min-h-[100vh] flex flex-col">
-    <img [src]="article!.imgUrl" class="max-h-[45vh]" alt="Article image">
+    <img [src]="article!.imgUrl" class="mx-auto max-h-[45vh] max-w-3xl rounded shadow" alt="Article image">
     <div class="flex px-6 pt-6 gap-4 flex-col h-full w-full">
         <h1 class="text-4xl text-center font-bold">
             {{article!.title}}
         </h1>
         <p class="text-xl text-justify">{{article!.content}}</p>
         <div class="">
-            <p class="text-lg font-bold">Writen By: {{article!.author.firstName}} {{article!.author.lastName}}</p>
-            <p class="text-lg font-bold">Publish: {{article!.createdAt | date}}</p>
+            <p class="text-lg font-bold">Written By: {{article!.author.firstName}} {{article!.author.lastName}}</p>
+            <p class="text-lg font-bold">Published: {{article!.createdAt | date}}</p>
         </div>
-        
     </div>
 </div>

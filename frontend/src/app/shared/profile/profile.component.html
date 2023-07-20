@@ -9,7 +9,7 @@
         <div class="flex flex-col">
             <p class="text-5xl font-bold">{{ currentUser!.firstName }} {{ currentUser!.lastName }}</p>
             <p class="text-xl">{{ currentUser!.profession }}</p>
-            <p class="text-md px-1 bg-lime-500 w-fit text-white rounded-md">{{ currentUser!.role }}</p>
+            <p class="text-md px-1 bg-blue-500 w-fit text-white rounded-md">{{ currentUser!.role }}</p>
         </div>
     </div>
         
@@ -36,10 +36,10 @@
         </div>
     </div>
 
-    <button (click)="showUpdateProfile(currentUser!)" class="px-4 py-3 absolute bottom-8 shadow-md right-8 bg-lime-500 hover:bg-lime-600 rounded-full  transition-all duration-300">
+    <button (click)="showUpdateProfile(currentUser!)" class="px-4 py-3 absolute bottom-8 shadow-md right-8 bg-blue-500 hover:bg-blue-600 rounded-full  transition-all duration-300">
         <i class="pi pi-user-edit text-white text-lg"></i>
     </button>
-    <button (click)="showUpdatePassword()" class="px-4 py-3 absolute bottom-[6rem] shadow-md right-8 bg-lime-500 hover:bg-lime-600 rounded-full  transition-all duration-300">
+    <button (click)="showUpdatePassword()" class="px-4 py-3 absolute bottom-[6rem] shadow-md right-8 bg-blue-500 hover:bg-blue-600 rounded-full  transition-all duration-300">
         <i class="pi pi-key text-white text-lg "></i>
     </button>
 </div>
